@@ -5,7 +5,7 @@ pipeline:
       - "echo '{ \"api_key\" : \"$SLACK_BOT_TOKEN\", \"bot_name\" : \"ctf\", \"send_help_as_dm\" : \"1\", \"admin_users\" : [\"serverwentdown\", \"Dlau\"] }' > config.json"
     secrets: [ slack_bot_token ]
   publish:
-    image: plugin/docker
+    image: plugins/docker
     registry: registry:5000
     repo: registry:5000/ota-challenge-bot
     insecure: true
