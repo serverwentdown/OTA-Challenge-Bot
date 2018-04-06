@@ -3,7 +3,7 @@ pipeline:
     image: alpine
     commands:
       - >
-        echo "{ \"api_key\" : \""$SLACK_BOT_TOKEN"\", \"bot_name\" : \"ctf\", \"send_help_as_dm\" : \"1\", \"admin_users\" : [\"daniellimws\"] }" > config.json
+        echo "{ \"api_key\" : \""$SLACK_BOT_TOKEN"\", \"bot_name\" : \"ctf\", \"send_help_as_dm\" : \"0\", \"admin_users\" : [\"daniellimws\"] }" > config.json
     secrets: [ slack_bot_token ]
   publish:
     image: plugins/docker
